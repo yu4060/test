@@ -10,7 +10,7 @@ with open('col1.txt', "w") as f1, open('col2.txt',"w") as f2:
     for l in data:
         l = l.split('\t')
         f1.write(l[0] + '\n')
-	f2.write(l[1] + '\n')
+        f2.write(l[1] + '\n')
 
 #with open('col2.txt', "w") as f2: #col2に2列目を保存
 #    for l in data:
