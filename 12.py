@@ -4,15 +4,18 @@
 with open('hightemp.txt', "r") as f:
     data = f.readlines() #データを読み込んでリストにする
 
-with open('col1.txt', "w") as f1: #col1に1列目を保存
+
+
+with open('col1.txt', "w") as f1, open('col2.txt',"w") as f2: 
     for l in data:
         l = l.split('\t')
         f1.write(l[0] + '\n')
+	f2.write(l[1] + '\n')
 
-with open('col2.txt', "w") as f2: #col2に2列目を保存
-    for l in data:
-        l = l.split('\t')
-        f2.write(l[1] + '\n')
+#with open('col2.txt', "w") as f2: #col2に2列目を保存
+#    for l in data:
+#        l = l.split('\t')
+#        f2.write(l[1] + '\n')
 
 #確認
 #cut -f 1-2 hightemp.txt
